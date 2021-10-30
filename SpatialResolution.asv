@@ -1,0 +1,21 @@
+ColorImage = imread('OriginalImage.jpg');
+figure;
+imshow(ColorImage,'InitialMagnification','fit');
+
+Grayscale = rgb2gray(ColorImage);
+figure;
+imshow(Grayscale,'InitialMagnification','fit');
+
+[height, width] = size(Grayscale);
+prompt = 'Number of Levels to Decrease: ';
+count = input(prompt);
+Resizefactor = 2;
+
+while count>0
+    ReducedImage = Grayscale(1:Resizefactor:height, 1:Resizefactor:width);
+    figure;
+    imshow(ReducedImage,'InitialMagnification','fit');
+    title("S
+    Resizefactor = Resizefactor*2;
+    count = count - 1;
+end
