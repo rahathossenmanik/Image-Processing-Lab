@@ -1,0 +1,22 @@
+ColorImage = imread('OriginalImage.jpg');
+figure;
+imshow(ColorImage,'InitialMagnification','fit');
+
+Grayscale = rgb2gray(ColorImage);
+figure;
+imshow(Grayscale,'InitialMagnification','fit');
+
+NoisyImage = imnoise(Grayscale,'salt & pepper');
+figure;
+imshow(NoisyImage,'InitialMagnification','fit');
+
+GeometricFilter = geomean(Grayscale)^(1/(m;
+HarmonicFilter = harmmean(Grayscale);
+
+GeometricFiltered = imfilter(Grayscale, GeometricFilter, 'symmetric');
+figure;
+imshow(AverageFiltered33,'InitialMagnification','fit');
+
+HarmonicFiltered = imfilter(Grayscale, HarmonicFilter, 'symmetric');
+figure;
+imshow(HarmonicFiltered,'InitialMagnification','fit');

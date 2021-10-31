@@ -1,0 +1,10 @@
+ColorImage = imread('OriginalImage.jpg');
+figure;
+imshow(ColorImage,'InitialMagnification','fit');
+
+Grayscale = rgb2gray(ColorImage);
+figure;
+imshow(Grayscale,'InitialMagnification','fit');
+
+Element = [0 0 0; 0 1 0; 0 o 0];
+imerode(Grayscale, Element);

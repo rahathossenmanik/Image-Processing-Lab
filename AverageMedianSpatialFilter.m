@@ -16,6 +16,6 @@ AverageFiltered = imfilter(Grayscale, filter, 'symmetric');
 figure;
 imshow(AverageFiltered,'InitialMagnification','fit');
 
-MedianFiltered = imfilter(Grayscale, [5,5]);
+MedianFiltered = medfilt2(Grayscale, [5,5]);
 figure;
 imshow(MedianFiltered,'InitialMagnification','fit');

@@ -14,14 +14,14 @@ filter33 = ones(3,3)/20;
 filter55 = ones(5,5)/20;
 filter77 = ones(7,7)/20;
 
-AverageFiltered33 = imfilter(Grayscale, filter, 'symmetric');
+AverageFiltered33 = imfilter(Grayscale, filter33, 'symmetric');
 figure;
 imshow(AverageFiltered33,'InitialMagnification','fit');
 
-AverageFiltered55 = imfilter(Grayscale, filter, 'symmetric');
+AverageFiltered55 = imfilter(Grayscale, filter55, 'symmetric');
 figure;
 imshow(AverageFiltered55,'InitialMagnification','fit');
 
-AverageFiltered77 = imfilter(Grayscale, filter, 'symmetric');
+AverageFiltered77 = imfilter(Grayscale, filter77, 'symmetric');
 figure;
 imshow(AverageFiltered77,'InitialMagnification','fit');
